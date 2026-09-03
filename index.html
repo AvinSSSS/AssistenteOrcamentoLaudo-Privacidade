@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Política de Privacidade do aplicativo Orçamento & Laudo."
+    />
+    <title>Política de Privacidade | Orçamento & Laudo</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #152033;
+        --muted: #536176;
+        --brand: #0b6b57;
+        --surface: #ffffff;
+        --canvas: #f3f7f6;
+        --line: #dce6e3;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background: var(--canvas);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      header {
+        background: linear-gradient(135deg, #093f37, #0b6b57);
+        color: #fff;
+        padding: 56px 24px 64px;
+      }
+
+      .wrap { max-width: 820px; margin: 0 auto; }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: #b7eee0;
+        font-size: 0.8rem;
+        font-weight: 750;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1, h2 { line-height: 1.2; }
+
+      h1 { margin: 0; font-size: clamp(2rem, 6vw, 3.35rem); letter-spacing: -0.04em; }
+
+      .subtitle { max-width: 600px; margin: 20px 0 0; color: #d9f6ed; font-size: 1.08rem; }
+
+      main {
+        max-width: 820px;
+        margin: -28px auto 48px;
+        padding: 0 24px;
+      }
+
+      article {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: 0 12px 35px rgba(19, 54, 47, 0.08);
+        padding: clamp(24px, 6vw, 52px);
+      }
+
+      h2 { margin: 38px 0 12px; color: #113d35; font-size: 1.32rem; }
+      h2:first-of-type { margin-top: 0; }
+      p { margin: 0 0 16px; }
+      ul { margin: 0 0 16px; padding-left: 22px; }
+      li + li { margin-top: 7px; }
+
+      .notice {
+        margin: 28px 0;
+        padding: 18px 20px;
+        border-left: 4px solid var(--brand);
+        border-radius: 8px;
+        background: #e9f7f2;
+      }
+
+      a { color: #075b4a; font-weight: 650; }
+      footer { padding: 0 24px 36px; color: var(--muted); font-size: 0.9rem; text-align: center; }
+      code { padding: 2px 5px; border-radius: 4px; background: #edf2f1; font-size: 0.9em; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <p class="eyebrow">Orçamento &amp; Laudo</p>
+        <h1>Política de Privacidade</h1>
+        <p class="subtitle">
+          Transparência sobre os dados usados para criar orçamentos, laudos e
+          documentos técnicos.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <p><strong>Última atualização: 2 de setembro de 2026.</strong></p>
+
+        <p>
+          Esta Política explica como o aplicativo Orçamento &amp; Laudo trata
+          informações. O aplicativo foi projetado para funcionar prioritariamente
+          no dispositivo do profissional.
+        </p>
+
+        <h2>1. Dados armazenados no dispositivo</h2>
+        <p>
+          Perfil profissional, clientes, endereços, preços personalizados,
+          orçamentos, itens, laudos, versões de texto e informações sobre PDFs
+          são armazenados localmente no aparelho, em banco de dados do
+          aplicativo. Esses dados não são enviados ao Firebase como backup nesta
+          versão.
+        </p>
+        <p>
+          O usuário controla os dados inseridos e pode apagá-los pelo aplicativo.
+          O logout, por si só, não remove a base local.
+        </p>
+
+        <h2>2. Login e segurança da conta</h2>
+        <p>
+          O cadastro e o login por e-mail/senha ou Google são processados pelo
+          Firebase Authentication. O aplicativo não recebe nem armazena a senha
+          em texto. A Firebase pode tratar identificadores de conta, como e-mail
+          e identificador de usuário, para autenticar o acesso.
+        </p>
+
+        <h2>3. Catálogo-base</h2>
+        <p>
+          O aplicativo consulta um catálogo-base de serviços e produtos no Cloud
+          Firestore. Esse catálogo é compartilhado entre usuários autenticados e
+          não contém clientes, orçamentos, laudos ou preços personalizados do
+          usuário.
+        </p>
+
+        <h2>4. Consultas de CEP e CNPJ</h2>
+        <p>
+          Quando o usuário optar por consultar CEP ou CNPJ, o valor consultado é
+          enviado ao serviço correspondente, como ViaCEP ou BrasilAPI, para
+          preencher campos de forma mais rápida. Os campos permanecem editáveis,
+          e a consulta é opcional.
+        </p>
+
+        <h2>5. Rascunhos técnicos com IA</h2>
+        <p>
+          A geração por IA é opcional e exige confirmação explícita antes de cada
+          uso. São enviados somente o serviço, o diagnóstico e as observações
+          técnicas que o usuário preencher. Por padrão, nome, documento, telefone,
+          endereço do cliente e valores do orçamento não são enviados.
+        </p>
+        <p>
+          A solicitação é encaminhada por um serviço próprio para o Gemini,
+          protegido por autenticação, App Check e limites de uso. O conteúdo
+          técnico não é persistido pelo serviço após a resposta. O texto retornado
+          é um rascunho e deve ser obrigatoriamente revisado pelo profissional.
+        </p>
+
+        <h2>6. Assinaturas e pagamentos</h2>
+        <p>
+          Recursos Premium podem ser contratados pela Google Play. A compra e a
+          renovação são processadas pelo Google. O aplicativo e seu serviço
+          recebem somente os dados necessários para verificar a assinatura e
+          liberar os recursos contratados, como identificador de usuário, produto
+          adquirido e estado da assinatura.
+        </p>
+
+        <h2>7. Anúncios</h2>
+        <p>
+          Usuários sem Premium podem visualizar um banner fornecido pelo Google
+          AdMob. O SDK pode coletar dados técnicos e identificadores do aparelho
+          para exibir, medir e proteger anúncios, conforme as políticas do Google.
+          O aplicativo solicita as escolhas de consentimento aplicáveis antes de
+          carregar anúncios.
+        </p>
+
+        <h2>8. Compartilhamento de PDFs</h2>
+        <p>
+          Os PDFs são gerados no aparelho. Ao escolher compartilhar um documento,
+          o usuário seleciona o aplicativo destinatário e é responsável pela forma
+          como o arquivo será enviado e armazenado fora do Orçamento &amp; Laudo.
+        </p>
+
+        <h2>9. Retenção e exclusão</h2>
+        <p>
+          Os dados locais permanecem no aparelho até serem apagados pelo usuário,
+          pela exclusão de conta no aplicativo ou pela remoção dos dados do app no
+          sistema operacional. A exclusão da conta remove a identidade no Firebase
+          e os dados locais daquele aparelho; arquivos já compartilhados não são
+          apagados de outros aplicativos ou serviços.
+        </p>
+
+        <div class="notice">
+          <strong>Importante:</strong> o usuário deve manter cópias dos documentos
+          que desejar preservar. Esta versão não oferece backup em nuvem de
+          clientes, orçamentos, laudos ou PDFs.
+        </div>
+
+        <h2>10. Alterações nesta política</h2>
+        <p>
+          Esta Política pode ser atualizada para refletir mudanças no aplicativo,
+          em integrações externas ou em exigências legais. A data de atualização
+          será ajustada nesta página.
+        </p>
+
+        <h2>11. Contato</h2>
+        <p>
+          Para dúvidas, solicitações relacionadas a dados ou comunicação sobre
+          privacidade, use a área de
+          <a href="https://github.com/AvinSSSS/AssistenteOrcamentoLaudo/issues">issues do projeto no GitHub</a>.
+          Não publique dados pessoais, documentos ou informações de clientes em
+          uma issue pública.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      © 2026 Orçamento &amp; Laudo · Política de Privacidade
+    </footer>
+  </body>
+</html>
